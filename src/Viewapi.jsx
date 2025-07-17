@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 
+
 const Viewapi = () => {
     var [Data, setData] = useState([])
     useEffect(() => {
@@ -34,7 +35,6 @@ const Viewapi = () => {
                                     <td align="center">{e.id}</td>
                                     <td align="center">{e.name}</td>
                                     <td align="center">{e.email}</td>
-                                    <td align="center">{e.password}</td>
                                     <td align="center">{e.password}</td>
                                 </tr>
                             </>
