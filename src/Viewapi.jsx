@@ -5,7 +5,7 @@ import axios from "axios"
 const Viewapi = () => {
     var [Data, setData] = useState([])
     useEffect(() => {
-        axios.get('https://geton.yarainfotech.com/get-data.php').then(function (show) {
+        axios.get('https://geton.yarainfotech.com/get-data.php').then(function(show) {
             // handle success
             // console.log(show.data);
             setData(show.data)
@@ -35,7 +35,7 @@ const Viewapi = () => {
                                     <td align="center">{e.id}</td>
                                     <td align="center">{e.name}</td>
                                     <td align="center">{e.email}</td>
-                                    <td align="center">{e.password}</td>
+                                    {/* <td align="center">{e.password}</td> */}
                                 </tr>
                             </>
                         )
