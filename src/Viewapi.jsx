@@ -23,7 +23,7 @@ const Viewapi = () => {
                     <th>ID</th>
                     <th>Name</th>
                     <th>Email</th>
-                    {/* <th>Password</th> */}
+                    <th>Password</th>
                 </tr>
 
                 {
@@ -35,7 +35,9 @@ const Viewapi = () => {
                                     <td align="center">{e.id}</td>
                                     <td align="center">{e.name}</td>
                                     <td align="center">{e.email}</td>
-                                    {/* <td align="center">{e.password}</td> */}
+                                    <td align="center">{e.password}</td>
+                                    <td align="center">{e.password}</td>
+                                    
                                 </tr>
                             </>
                         )
