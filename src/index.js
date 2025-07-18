@@ -18,7 +18,7 @@ root.render(
         {/* <Bootstrap/> */}
         {/* <Map/> */}
         {/* <Component1 /> */}
-        <Viewapi/>
+        {/* <Viewapi/> */}
         <Insertapi/>
     </>
 );
