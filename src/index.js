@@ -7,6 +7,7 @@ import Viewapi from './Viewapi';
 // import Bootstrap from './Bootstrap';
 // import Component1 from './Component1';
 // import Map from './Map';
+import Insertapi from './Insertapi';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,6 +19,7 @@ root.render(
         {/* <Map/> */}
         {/* <Component1 /> */}
         <Viewapi/>
+        <Insertapi/>
     </>
 );
 

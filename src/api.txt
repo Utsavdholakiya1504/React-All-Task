@@ -1,1 +1,5 @@
 View API :-  https://geton.yarainfotech.com/get-data.php 
+
+
+
+Insert API :-  https://geton.yarainfotech.com/insert-data.php 
