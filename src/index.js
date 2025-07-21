@@ -8,6 +8,7 @@ import Viewapi from './Viewapi';
 // import Component1 from './Component1';
 // import Map from './Map';
 import Insertapi from './Insertapi';
+import Deleteapi from './Deleteapi';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -19,7 +20,8 @@ root.render(
         {/* <Map/> */}
         {/* <Component1 /> */}
         {/* <Viewapi/> */}
-        <Insertapi/>
+        {/* <Insertapi/> */}
+        <Deleteapi/>
     </>
 );
 
