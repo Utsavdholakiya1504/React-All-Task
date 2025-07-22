@@ -1,11 +1,14 @@
 import axios from "axios";
 import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Insertapi = () => {
     var txtname = useRef()
     var txtemail = useRef()
     var txtpassword = useRef()
-
+    var navigate= useNavigate()
+    
+    
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -18,7 +21,12 @@ const Insertapi = () => {
         a.set("email", email)
         a.set("password", password)
 
-        axios.post('https://geton.yarainfotech.com/insert-data.php', a).then(function (data) { })
+        axios.post('https://geton.yarainfotech.com/insert-data.php', a).then(function (data) { 
+            if (data.data.status == "true") {
+                navigate("/");
+            }
+            
+        })
 
     }
 
@@ -27,7 +35,7 @@ const Insertapi = () => {
 
     return (
         <>
-            <form method="post" onSubmit={handleSubmit}>
+             <form method="post" onSubmit={handleSubmit}>
                 <table cellPadding={12} border={2} cellSpacing={0}  >
 
                     <tr>
@@ -36,12 +44,12 @@ const Insertapi = () => {
                     </tr>
                     <tr>
                         <td>Email</td>
-                        <td><input type="email" ref={txtemail} /></td>
+                        <td><input type="text" ref={txtemail} /></td>
 
                     </tr>
                     <tr>
                         <td>Password</td>
-                        <td><input type="password" ref={txtpassword} /></td>
+                        <td><input type="text" ref={txtpassword} /></td>
 
                     </tr>
                     <tr>

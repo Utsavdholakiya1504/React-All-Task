@@ -1,5 +1,6 @@
 // import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Viewapi from './Viewapi';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import Counters from './Counters';
@@ -8,20 +9,19 @@ import Viewapi from './Viewapi';
 // import Component1 from './Component1';
 // import Map from './Map';
 import Insertapi from './Insertapi';
-import Deleteapi from './Deleteapi';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <>
-        {/* <Counters /> */}
-        {/* <Memohook/> */}
-        {/* <Bootstrap/> */}
-        {/* <Map/> */}
-        {/* <Component1 /> */}
-        {/* <Viewapi/> */}
-        {/* <Insertapi/> */}
-        <Deleteapi/>
+
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Viewapi />} />
+                <Route path="/insert" element={<Insertapi />} />
+            </Routes>
+        </BrowserRouter>
+
     </>
 );
 

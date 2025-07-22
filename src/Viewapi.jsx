@@ -1,21 +1,42 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
+import { Link } from "react-router-dom"
 
 
 const Viewapi = () => {
     var [Data, setData] = useState([])
     useEffect(() => {
+        fetchdata();
+    }, [])
+
+    function fetchdata() {
         axios.get('https://geton.yarainfotech.com/get-data.php').then(function (show) {
             // handle success
             // console.log(show.data);
             setData(show.data)
         })
+    }
 
-    }, [])
+
+    const handleDelete = (e) => {
+
+        var id = e.target.getAttribute('data');
+
+        var a = new FormData()
+
+        a.set('id', id)
+
+        axios.post('https://geton.yarainfotech.com/delete-data.php', a).then(function () {
+            fetchdata();
+
+        })
+    }
 
 
     return (
         <>
+            <Link to={'/insert'}>Add Data</Link>
+
             <table cellPadding={12} border={2} cellSpacing={0} width={500} >
                 <tr align="center">
 
@@ -24,6 +45,7 @@ const Viewapi = () => {
                     <th>Name</th>
                     <th>Email</th>
                     <th>Password</th>
+                    <th>Action</th>
                 </tr>
 
                 {
@@ -36,8 +58,9 @@ const Viewapi = () => {
                                     <td align="center">{e.name}</td>
                                     <td align="center">{e.email}</td>
                                     <td align="center">{e.password}</td>
-                                    <td align="center">{e.password}</td>
-
+                                    <td>
+                                        <button onClick={handleDelete} data={e.id}>Delete</button>
+                                    </td>
                                 </tr>
                             </>
                         )
