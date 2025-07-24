@@ -9,7 +9,8 @@ import Viewapi from './Viewapi';
 // import Component1 from './Component1';
 // import Map from './Map';
 import Insertapi from './Insertapi';
-
+import Updateapi from './Updateapi';
+ 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,7 +20,8 @@ root.render(
             <Routes>
                 <Route path="/" element={<Viewapi />} />
                 <Route path="/insert" element={<Insertapi />} />
-            </Routes>
+                <Route path="//update/:id" element={<Updateapi />} />
+             </Routes>
         </BrowserRouter>
 
     </>

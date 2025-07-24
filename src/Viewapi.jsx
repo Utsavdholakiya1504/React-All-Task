@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 
 const Viewapi = () => {
     var [Data, setData] = useState([])
+    var navigate = useNavigate()
+
     useEffect(() => {
         fetchdata();
     }, [])
@@ -32,10 +34,18 @@ const Viewapi = () => {
         })
     }
 
+    const handleUpdate = (e) => {
+
+        var id = e.target.getAttribute('data');
+
+        navigate('/update/' + id)
+
+    }
+
 
     return (
         <>
-            <Link to={'/insert'}>Add Data</Link>
+            {/* <Link to={'/insert'}>Add Data</Link> */}
 
             <table cellPadding={12} border={2} cellSpacing={0} width={500} >
                 <tr align="center">
@@ -46,6 +56,7 @@ const Viewapi = () => {
                     <th>Email</th>
                     <th>Password</th>
                     <th>Action</th>
+                    {/* <th>Action2</th> */}
                 </tr>
 
                 {
@@ -61,12 +72,17 @@ const Viewapi = () => {
                                     <td>
                                         <button onClick={handleDelete} data={e.id}>Delete</button>
                                     </td>
+                                    <td>
+                                        <button onClick={handleUpdate} data={e.id}>Edit</button>
+                                    </td>
                                 </tr>
                             </>
                         )
                     })
                 }
             </table>
+            <br />
+            <Link to={'/insert'} style={{ border: "3px solid black", padding: "5px", margin: "15px", textDecoration: "none", color: "Black" }}>Add Data</Link>
         </>
     )
 }
