@@ -38,7 +38,7 @@ const Updateapi = () => {
 
         axios.post('https://geton.yarainfotech.com/edit-data.php', a).then(function (data) {
             if (data.data.status == "true") {
-                navigate("/");
+                navigate("/view");
             }
 
         })
