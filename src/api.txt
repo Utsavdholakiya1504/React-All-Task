@@ -17,4 +17,8 @@ single data API :-  https://geton.yarainfotech.com/single-data.php
 Update API :-  https://geton.yarainfotech.com/edit-data.php 
 
 
+
+Login API :-  https://geton.yarainfotech.com/login-data.php 
+
+
  

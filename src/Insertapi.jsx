@@ -23,7 +23,7 @@ const Insertapi = () => {
 
         axios.post('https://geton.yarainfotech.com/insert-data.php', a).then(function (data) { 
             if (data.data.status == "true") {
-                navigate("/");
+                navigate("/view");
             }
             
         })
