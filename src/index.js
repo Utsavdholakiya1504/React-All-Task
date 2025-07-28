@@ -23,7 +23,7 @@ root.render(
                 <Route path="/view" element={<Viewapi />} />
                 <Route path="/insert" element={<Insertapi />} />
                 <Route path="//update/:id" element={<Updateapi />} />
-             </Routes>
+              </Routes>
         </BrowserRouter>
 
     </>

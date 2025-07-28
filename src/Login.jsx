@@ -34,6 +34,11 @@ const Login = () => {
         })
 
     }
+    
+    
+    const handleRegister = () => {
+         navigate("/insert")
+    }
 
 
 
@@ -55,6 +60,7 @@ const Login = () => {
                     </tr>
                     <tr>
                         <td><input type="submit" value={'Submit'} /></td>
+                        <td><button onClick={handleRegister} sty>Register</button></td>
                     </tr>
                 </table>
             </form>

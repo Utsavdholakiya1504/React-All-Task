@@ -87,13 +87,14 @@ const Viewapi = () => {
                     }
                 </table>
                 <br />
-                <Link to={'/insert'} style={{ border: "3px solid black", padding: "5px", margin: "15px", textDecoration: "none", color: "Black" }}>Add Data</Link>
+                <Link to={'/insert'} style={{ border: "3px solid black", padding: "1px", margin: "15px", textDecoration: "none", color: "Black" }}>Add Data</Link>
                 <button onClick={handleLogout} style={{ border: "3px solid black", padding: "2px", margin: "10px", textDecoration: "none", color: "Black" }}>Log Out</button>
             </>
 
         )
 
     }
+    
     else {
         navigate("/")
     }
