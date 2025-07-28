@@ -11,7 +11,7 @@ import Viewapi from './Viewapi';
 import Insertapi from './Insertapi';
 import Updateapi from './Updateapi';
 import Login from './Login';
- 
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,11 +19,13 @@ root.render(
 
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={<Login/>} />
+                {/* <Route path="/" element={<Login/>} />
                 <Route path="/view" element={<Viewapi />} />
                 <Route path="/insert" element={<Insertapi />} />
-                <Route path="//update/:id" element={<Updateapi />} />
-              </Routes>
+                <Route path="//update/:id" element={<Updateapi />} /> */}
+
+                {/* <Route path="/" element={< />} ></Route> */}
+            </Routes>
         </BrowserRouter>
 
     </>
