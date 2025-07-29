@@ -6,7 +6,7 @@ const xyz = {
 
 function reducer(state = xyz, action) {
     switch (action.type) {
-        case msg:
+        case "msg":
             return {
                 name: "utsav"
             }
@@ -18,7 +18,7 @@ function reducer(state = xyz, action) {
     }
 }
 
-const Store = createStore(reducer)
+const Reduxstore = createStore(reducer)
 
 
-export default Store
+export default Reduxstore
