@@ -34,8 +34,13 @@ root.render(
             </Routes>
         </BrowserRouter>*/}
 
-        <Provider store={Reduxstore}>
+        {/* <Provider store={Reduxstore}>
             <Test/>
+        </Provider>
+         */}
+        
+        <Provider store={Reduxstore2}>
+            <Test2/>
         </Provider>
     </>
 );

@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 const Test = () => {
-    const name = useSelector((state) => state.message);
+    const name = useSelector((state) => state.name);
     var dispatch = useDispatch();
 
     const handleClick = () => {

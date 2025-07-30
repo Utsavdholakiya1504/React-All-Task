@@ -8,7 +8,7 @@ function reducer(state = xyz, action) {
     switch (action.type) {
         case "msg":
             return {
-                name: "utsav"
+                name: "Skywin"
             }
             break;
 
